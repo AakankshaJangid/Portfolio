@@ -10,7 +10,7 @@ body{
     line-height: 1.6;
 }
 img{
-    width:100%;
+    width:80%;
     display: block;
 }
 ul li{
@@ -31,7 +31,6 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 .header-sec{
-    min-height: 100vh;
     color: black;
     background-color: skyblue;
 }
@@ -83,14 +82,13 @@ h1,h2,h3,h4,h5,h6,p{
     font-size: 25px;
     font-weight: 150;
 }
-
+.header-container{
+    padding: 10px;
+}
 .about-content h1{
     font-family: 'Mouse Memoirs', sans-serif;
     font-size: 90px;
     letter-spacing: 2px;
-}
-.about-img{
-    width: 400px;
 }
 .social-icons{
     width: 400px;
@@ -125,12 +123,14 @@ h1,h2,h3,h4,h5,h6,p{
 .container1{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     margin: 0px 20px 0px 20px ;
     padding-top: 60px;
     padding-bottom: 60px;
 }
 .sec-one-left{
-    padding: 15px;
+    padding: 10px;
+    align-items: center;
 }
 #myPic{
     border-radius: 50%;
@@ -147,7 +147,6 @@ h1,h2,h3,h4,h5,h6,p{
 }
 .sec-one-right{
     padding: 10px;
-    margin: 10px 10px;
 }
 .section-two{
     width: 100%;
@@ -202,6 +201,7 @@ h1,h2,h3,h4,h5,h6,p{
 .section-three{
     background-color: rgb(3, 150, 208);
     margin: 0px;
+    align-items: center;
 }
 .section-three h2{
     margin-bottom: 50px;
@@ -217,19 +217,17 @@ h1,h2,h3,h4,h5,h6,p{
     flex-direction: row;
     justify-content: space-evenly;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 0.6rem auto;
     font-size: 30px;
     width: 80%;
-    text-align: center;
 }
 .Project-container{
-    width: 30%;
     background-size: cover;
+    text-align: left;
 }
 .p-img{
     border: 2px solid black;
-    height: 200px;
-
+    height: 10rem;
 }
 .section-four{
     margin: 0px;
@@ -273,8 +271,8 @@ h1,h2,h3,h4,h5,h6,p{
 .contact-middle{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    width: 50%;
     padding: 6px;
+    width: 50%;
 }
 .contact-middle div{
     text-align: center;
@@ -303,7 +301,6 @@ h1,h2,h3,h4,h5,h6,p{
 .footer-container{
     display: flex;
     flex-direction: row;
-    width: 100%;
 }
 .footer-container > div{
     margin: 10px 0;
@@ -322,9 +319,8 @@ h1,h2,h3,h4,h5,h6,p{
     font-size: 14px;
 }
 .footer-text{
-    width: 50%;
     font-family: 'Mouse Memoirs', sans-serif;
-
+    width: 50%;
 }
 .footer-text  h2{
     font-family: 'Mouse Memoirs', sans-serif;
@@ -355,4 +351,43 @@ h1,h2,h3,h4,h5,h6,p{
 .btn:hover{
     background: rgb(3, 150, 208);
     color: white;
+}
+@media screen and (min-device-width: 820px) and (max-device-width: 1180px) { 
+    .container1{
+        display: flex;
+        flex-direction: column;
+    }
+    .container1 #mypic{
+        height: 45px;
+        width: auto;
+    }
+    .container1 .sec-one-left{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .skillbox{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+        align-items: center;
+        margin: 0 8rem;
+    }
+
+    .project-box{
+        display: flex;
+        align-items: center;
+    }
+    .contact-bottom{
+        padding: 1rem;
+    }
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-text{
+        width: 100%;
+    }
+    .contact-middle{
+        width: 100%;
+    }
 }
